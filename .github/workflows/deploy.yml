@@ -23,5 +23,3 @@ jobs:
         with:
           push: true # Will only build if this is not here
           tags: ghcr.io/radikz/item-app:v1
-          cache-from: ghcr.io/radikz/item-app
-          cache-to: ghcr.io/radikz/item-app
