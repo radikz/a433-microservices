@@ -24,4 +24,4 @@ jobs:
           context: .
           file: ./Dockerfile 
           push: true # Will only build if this is not here
-          tags: ghcr.io/item-app:v1
+          tags: ghcr.io/radikz/a433-microservices/item-app:v1
