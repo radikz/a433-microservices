@@ -24,4 +24,4 @@ jobs:
           context: .
           file: ./Dockerfile 
           push: true # Will only build if this is not here
-          tags: ${{ env.REGISTRY }}/{{ github.repository }}/item-app:v1
+          tags: ${{ env.REGISTRY }}/radikz/item-app:v1
