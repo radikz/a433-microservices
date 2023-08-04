@@ -22,6 +22,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: Dockerfile 
+          file: ./Dockerfile 
           push: true # Will only build if this is not here
-          tags: radikz/item-app:v1
+          tags: ${{ env.REGISTRY }}/{{ github.repository }}/item-app:v1
