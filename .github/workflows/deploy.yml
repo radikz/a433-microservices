@@ -23,4 +23,4 @@ jobs:
         with:
           push: true # Will only build if this is not here
           tags: |
-            item-app:$v1
+            item-app:v1
