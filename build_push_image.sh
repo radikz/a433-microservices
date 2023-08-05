@@ -14,4 +14,4 @@ service at ghcr.io
 echo $CR_PAT | docker login ghcr.io --username radikz --password-stdin
 
 # Push to Github Packages
-docker push ghcr.io/tooopu/a433-microservices/item-app:v1
+docker push ghcr.io/radikz/a433-microservices/item-app:v1
