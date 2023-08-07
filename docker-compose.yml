@@ -1,0 +1,34 @@
+version: "3.7"
+
+services:
+  # Service for the item-app container
+  item-app:
+    # Specify the Docker image for item-app from GitHub Container Registry
+    image: ghcr.io/radikz/a433-microservices/item-app:v1
+    
+    # Map port 80 of the host to port 8080 of the container
+    ports:
+      - 80:8080
+
+    # Ensure the container restarts automatically if it crashes or is stopped
+    restart: always
+
+    # Specify the dependency on the item-db service. item-app will start after item-db is up and running.
+    depends_on:
+      - item-db
+
+  # Service for the item-db container
+  item-db:
+    # Specify the Docker image for item-db from Docker Hub (MongoDB version 3)
+    image: mongo:3
+
+    # Mount the volume 'app-db' to persist the MongoDB data in /data/db inside the container
+    volumes:
+      - app-db:/data/db
+
+    # Ensure the container restarts automatically if it crashes or is stopped
+    restart: always
+
+volumes:
+  # Define the 'app-db' volume to store MongoDB data persistently
+  app-db:
