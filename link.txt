@@ -1,0 +1,1 @@
+Github container registry: https://github.com/radikz/a433-microservices/pkgs/container/a433-microservices%2Fitem-app
